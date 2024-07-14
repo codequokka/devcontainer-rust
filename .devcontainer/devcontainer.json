@@ -1,0 +1,21 @@
+{
+    "name": "devcontainer-rust",
+    "image": "mcr.microsoft.com/devcontainers/rust:1-1-bookworm",
+    "containerEnv": {
+        "TZ": "Asia/Tokyo"
+    },
+    "runArgs": [
+        "--init"
+    ],
+    "workspaceFolder": "/workspace",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+    "customizations": {
+        "vscode": {
+            "extensions": [],
+            "settings": {
+                "editor.formatOnSave": true,
+                "[rust]": {}
+            }
+        }
+    }
+}
